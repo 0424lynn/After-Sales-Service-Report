@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "name": "管理员",
+      "role": "admin",
+      "salt": "7844f8dd3c7fd9f111c27fda1540abc7",
+      "password_hash": "4b94783a1dc598d62b3fca13dcc431df41152f6258e91dd9828184c5a42183ec"
+    },
+    {
+      "username": "analyst",
+      "name": "分析员",
+      "role": "analyst",
+      "salt": "aa16524577b917c60977284a7a20c0de",
+      "password_hash": "e6bbfa922b66a357de51b55c3379b986f5800ced1be4f803df3968820eedf811"
+    }
+  ]
+}

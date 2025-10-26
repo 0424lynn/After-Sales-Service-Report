@@ -1,3 +1,15 @@
+import streamlit as st
+from auth import require_login, logout_button
+
+st.set_page_config(page_title="可视化", layout="wide")
+
+# ① 任何渲染前都先鉴权
+require_login()
+
+# ② 顶部/侧边显示登出
+logout_button()
+
+st.title("可视化总览")
 # ==== 放在 App.py 顶部（所有 st.* 之前） ====
 import os, re, sys
 import streamlit as st

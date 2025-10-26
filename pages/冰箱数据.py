@@ -1,28 +1,7 @@
-# -*- coding: utf-8 -*-
-# 冰箱数据（完整版，含季度支持 & 多处报错修复）
-
 # ==== 顶部追加：新会话（刷新/直接打开子页）时，回到“可视化” ====
 import streamlit as st
+from auth import require_login, current_user, is_admin, logout_button
 
-# 说明：
-# - Streamlit 每次“硬刷新/新打开标签页”都会创建新的会话（session），此时 session_state 为空。
-# - 我们用一个标记 _first_load_done 来识别“本会话的第一次加载”：
-#   1) 如果用户刷新或直接打开子页（新的会话），标记不存在 -> 立即跳去“可视化”，并把标记设为 True。
-#   2) 如果是站内点击导航（仍在同一会话），标记已经存在 -> 不跳转，正常停留在当前子页。
-if "_first_load_done" not in st.session_state:
-    st.session_state["_first_load_done"] = True
-    try:
-        st.switch_page("可视化.py")
-    except Exception:
-        try:
-            st.switch_page("pages/可视化.py")
-        except Exception:
-            import streamlit.components.v1 as components
-            components.html(
-                "<script>window.parent.location.pathname = decodeURIComponent(window.parent.location.pathname).replace(/[^/]+$/, '可视化');</script>",
-                height=0,
-            )
-# ==== 顶部追加结束 ====
 
 # === BEGIN: 彻底从侧栏移除“分析”页面（放最顶部，且在 st.set_page_config 之前） ===
 import os, re, sys
@@ -87,6 +66,7 @@ from urllib.parse import quote as _urlquote
 # ============== 页面配置 ==============
 st.set_page_config(page_title="冰箱数据", layout="wide", initial_sidebar_state="expanded")
 st.title("冰箱数据")
+require_login()
 
 # ============== 跳转辅助 ==============
 def _find_page_url(target_tail: str):
@@ -568,7 +548,6 @@ def build_monthly_numeric(df_year: pd.DataFrame, fleet_all: dict, current_year: 
         "月度预估保内维修费用（美元）": [],
         "月度保内数量": [],
         "折算保内维修率%": [],
-        # 👇 新增两行：按分类口径的月度费用与已付款数量（仅用于后续季度加权）
         "月度费用（分类口径）": [],
         "月度已付款数量（分类口径）": [],
     }
@@ -584,11 +563,7 @@ def build_monthly_numeric(df_year: pd.DataFrame, fleet_all: dict, current_year: 
             paid4 = 0
         else:
             dfm = df_year[df_year["Month"] == m]
-
-            # 1) 月度总单量
             total = len(dfm)
-
-            # 2) “质量维修量”与保内口径，与原逻辑一致
             if total > 0:
                 cat_quality = dfm["Category1"].astype(str).eq("质量问题")
                 text_block  = joined_year.loc[dfm.index]
@@ -597,11 +572,8 @@ def build_monthly_numeric(df_year: pd.DataFrame, fleet_all: dict, current_year: 
             else:
                 quality_cnt = 0
 
-            # 3) **关键**：按分类口径取当月费用与已付款数量
-            #    口径 = (质量问题,Atosa) + (非质量问题,合计) + (出保,只寄配件) + (待定,未收到账单/其他人付款)
             stats_m = compute_category_stats(dfm)
             def _pick(c1, c2):
-                # 返回 (数量, 费用, 已付款数量, 平均费用)
                 return stats_m.get((c1, c2), (0, 0.0, 0, 0.0))
             _, fee_atosa,      paid_atosa,      _ = _pick("质量问题", "Atosa")
             _, fee_nonq_sum,   paid_nonq_sum,   _ = _pick("非质量问题", "合计")
@@ -611,24 +583,20 @@ def build_monthly_numeric(df_year: pd.DataFrame, fleet_all: dict, current_year: 
             fees4 = float(fee_atosa + fee_nonq_sum + fee_out + fee_pending)
             paid4 = int(paid_atosa + paid_nonq_sum + paid_out + paid_pending)
 
-        # 4) 平均维修单费用（美元）= 这四类的 费用 / 已付款数量（加权平均的分子分母）
         avg_cost = (fees4 / paid4) if paid4 > 0 else 0.0
-
-        # 5) 保内数量 & 预估保内费用（保持你现有口径）
         month_fleet = get_fleet_month(fleet_all, int(current_year), int(m))
         warranty_cnt = int(sum(month_fleet.values()))
         est_cost = avg_cost * quality_cnt
         rate_pct = (quality_cnt / warranty_cnt * 100.0) if warranty_cnt > 0 else 0.0
 
-        # —— 写行
         rows["月度维修量"].append(total)
         rows["月度质量维修量"].append(quality_cnt)
         rows["平均维修单费用（美元）"].append(avg_cost)
         rows["月度预估保内维修费用（美元）"].append(est_cost)
         rows["月度保内数量"].append(warranty_cnt)
         rows["折算保内维修率%"].append(rate_pct)
-        rows["月度费用（分类口径）"].append(fees4)           # 新增隐藏行（数值）
-        rows["月度已付款数量（分类口径）"].append(paid4)       # 新增隐藏行（数值）
+        rows["月度费用（分类口径）"].append(fees4)
+        rows["月度已付款数量（分类口径）"].append(paid4)
 
     pv = pd.DataFrame(rows).T
     pv = pv.reindex([
@@ -638,14 +606,13 @@ def build_monthly_numeric(df_year: pd.DataFrame, fleet_all: dict, current_year: 
         "月度预估保内维修费用（美元）",
         "月度保内数量",
         "折算保内维修率%",
-        "月度费用（分类口径）",             # 放在末尾，供后续季度加权用
+        "月度费用（分类口径）",
         "月度已付款数量（分类口径）",
     ])
     pv.columns = [f"{m}月" for m in months]
     for c in pv.columns:
         pv[c] = pd.to_numeric(pv[c], errors="coerce").fillna(0)
     return pv
-
 
 def build_monthly_display(pv_numeric: pd.DataFrame)->pd.DataFrame:
     pv = pv_numeric.copy()
@@ -654,10 +621,8 @@ def build_monthly_display(pv_numeric: pd.DataFrame)->pd.DataFrame:
     pv.loc["折算保内维修率%"] = pv.loc["折算保内维修率%"].map(lambda x: f"{x:.2f}%")
     for r in ["月度维修量","月度质量维修量","月度保内数量"]:
         pv.loc[r] = pv.loc[r].astype(int)
-         # 👇 隐藏辅助行
     pv = pv.drop(index=["月度费用（分类口径）","月度已付款数量（分类口径）"], errors="ignore")
     return pv
-    
 
 def build_quarter_from_monthly(pv_numeric: pd.DataFrame, *, fleet_mode: str = "avg")->pd.DataFrame:
     q_cols = {
@@ -666,14 +631,11 @@ def build_quarter_from_monthly(pv_numeric: pd.DataFrame, *, fleet_mode: str = "a
         "Q3": ["7月","8月","9月"],
         "Q4": ["10月","11月","12月"],
     }
-
-    # 先做常规求和（用于除“平均维修单费用（美元）”以外的大多数行）
     q_num = pd.DataFrame(index=pv_numeric.index, columns=list(q_cols.keys())+["全年"], dtype=float)
     for q, cols in q_cols.items():
         q_num[q] = pv_numeric[cols].sum(axis=1, numeric_only=True)
     q_num["全年"] = pv_numeric.sum(axis=1, numeric_only=True)
 
-    # —— 用隐藏行做加权平均：平均维修单费用（美元）
     fee_row  = "月度费用（分类口径）"
     paid_row = "月度已付款数量（分类口径）"
     avg_row  = "平均维修单费用（美元）"
@@ -686,7 +648,6 @@ def build_quarter_from_monthly(pv_numeric: pd.DataFrame, *, fleet_mode: str = "a
         paid_y = float(pv_numeric.loc[paid_row].sum())
         q_num.loc[avg_row, "全年"] = (fees_y / paid_y) if paid_y > 0 else 0.0
 
-    # 行名重命名
     rename = {
         "月度维修量": "季度维修量",
         "月度质量维修量": "季度质量维修量",
@@ -699,19 +660,12 @@ def build_quarter_from_monthly(pv_numeric: pd.DataFrame, *, fleet_mode: str = "a
     }
     q_num.index = [rename.get(i, i) for i in q_num.index]
 
-    # ✅ 关键：让“季度保内数量”按口径切换（与型号系列维度保持一致）
-    # fleet_mode = "avg" 表示用「月均在保数量」，"sum" 表示「季度合计」
     if "季度保内数量" in q_num.index and "月度保内数量" in pv_numeric.index:
         if fleet_mode.lower() == "avg":
-            # 每个季度 = 当季 3 个月“月度保内数量”的平均；全年 = 12 个月平均
             for q, cols in q_cols.items():
                 q_num.loc["季度保内数量", q] = float(pv_numeric.loc["月度保内数量", cols].mean())
             q_num.loc["季度保内数量", "全年"] = float(pv_numeric.loc["月度保内数量"].mean())
-        else:
-            # 默认保留原合计口径（已经在前面用 sum 算过，不需要改）
-            pass
 
-    # —— 生成展示用副本（隐藏辅助行 & 美化）
     q_show = q_num.copy()
     for r in ["平均维修单费用（美元）", "季度预估保内维修费用（美元）"]:
         if r in q_show.index:
@@ -726,87 +680,128 @@ def build_quarter_from_monthly(pv_numeric: pd.DataFrame, *, fleet_mode: str = "a
     return q_show
 
 
-
-# ============== 侧栏（上传/清空/目标） ==============
+# ============== 侧栏（权限收口：上传/清空仅管理员） ==============
 with st.sidebar:
-    up = st.file_uploader("上传数据（CSV/XLSX）", type=["csv","xlsx","xls"])
+    logout_button()
+    # 顶部显示当前登录身份（若无登录，视作只读模式）
+    u = current_user() or {"username":"未登录","name":"访客","role":"viewer"}
+    st.markdown(f"**当前用户**：{u.get('name','')}（{u.get('username','')} / {u.get('role','')}）")
 
-    def _read_any(up_file):
-        if up_file is None: return pd.DataFrame()
-        name = up_file.name.lower()
-        try:
-            if name.endswith((".xlsx",".xls")):
-                df0 = pd.read_excel(up_file, sheet_name=0, header=0, dtype=str)
-            else:
-                df0 = pd.read_csv(up_file, dtype=str, encoding="utf-8-sig")
-        except UnicodeDecodeError:
-            df0 = pd.read_csv(up_file, dtype=str, encoding="gbk", errors="ignore")
-        except Exception as e:
-            st.error(f"读取失败：{e}"); return pd.DataFrame()
-        return df0
-
-    df_raw = _read_any(up)
-
-    # —— 原始 Excel 历史（累积保存）
-    raw_store = _load_raw_excel_store()
-    if "excel_raw_history" not in st.session_state:
-        st.session_state["excel_raw_history"] = raw_store.copy()
-    if not df_raw.empty:
-        df_raw_add = df_raw.copy()
-        df_raw_add["__SourceFile"] = getattr(up, "name", "") if up is not None else ""
-        df_raw_add["__ImportedAt"] = pd.Timestamp.now(tz=None)
-        st.session_state["excel_raw_history"] = pd.concat(
-            [st.session_state["excel_raw_history"], df_raw_add], ignore_index=True
-        )
-        _save_raw_excel_store(st.session_state["excel_raw_history"])
-
-    date_col_name = (list(df_raw.columns)[0] if not df_raw.empty else None)
-    st.session_state["date_col_name"] = date_col_name
-    df = ensure_cols(df_raw, date_col_name=date_col_name)
-
-    def _bytes_md5(b: bytes)->str:
-        h=hashlib.md5(); h.update(b); return h.hexdigest()
-    upload_md5=None
-    if up is not None:
-        try: upload_md5=_bytes_md5(up.getvalue())
-        except Exception: upload_md5=None
-    is_new_upload=False
-    if upload_md5:
-        last_md5=st.session_state.get("_last_upload_md5")
-        if last_md5!=upload_md5:
-            is_new_upload=True
-            st.session_state["_last_upload_md5"]=upload_md5
-
+    # —— 先加载“当前已存数据”（供所有人使用）
     persisted_file = ensure_cols(load_store_df())
+    st.session_state["store_df"] = ensure_cols(persisted_file.copy())
 
-    # 给当前上传的标准化数据打上来源
-    if not df.empty:
-        df = df.copy()
-        df["SourceFile"] = getattr(up, "name", "") if up is not None else ""
-        df["ImportedAt"] = pd.Timestamp.now(tz=None)
+    # ===== 管理员区：可见“上传数据”与“数据清空” =====
+    if is_admin():
+        st.markdown("---")
+        st.subheader("🔐 管理员区")
 
-    merge_mode = "仅追加（不去重）"
-    st.caption("合并策略：仅追加（不去重）")
+        # 1) 上传数据（CSV/XLSX）
+        up = st.file_uploader("上传数据（CSV/XLSX）", type=["csv","xlsx","xls"])
 
-    if is_new_upload and not df.empty:
-        merged = ensure_cols(pd.concat([persisted_file, df], ignore_index=True))
-        save_store_df(merged)
-        persisted = merged
-    else:
-        persisted = persisted_file
+        def _read_any(up_file):
+            if up_file is None: return pd.DataFrame()
+            name = up_file.name.lower()
+            try:
+                if name.endswith((".xlsx",".xls")):
+                    df0 = pd.read_excel(up_file, sheet_name=0, header=0, dtype=str)
+                else:
+                    df0 = pd.read_csv(up_file, dtype=str, encoding="utf-8-sig")
+            except UnicodeDecodeError:
+                df0 = pd.read_csv(up_file, dtype=str, encoding="gbk", errors="ignore")
+            except Exception as e:
+                st.error(f"读取失败：{e}"); return pd.DataFrame()
+            return df0
 
-    st.session_state["store_df"] = ensure_cols(persisted.copy())
-    st.caption(f"已存数据量：{len(st.session_state['store_df'])} 条（合并策略：{merge_mode}）")
+        df_raw = _read_any(up)
 
-    if not st.session_state["store_df"].empty:
-        tmp=st.session_state["store_df"].copy()
-        tmp["Year"]=pd.to_numeric(tmp["Year"], errors="coerce")
-        tmp["Month"]=pd.to_numeric(tmp["Month"], errors="coerce")
-        ym_count=(tmp.dropna(subset=["Year","Month"]).astype({"Year":int,"Month":int})
-                  .groupby(["Year","Month"]).size().reset_index(name="数量").sort_values(["Year","Month"]))
-        with st.expander("📊 Year/Month 数量分布（默认收起）", expanded=False):
-            st.dataframe(ym_count, use_container_width=True, height=200)
+        # 原始 Excel 历史（累积保存）
+        raw_store = _load_raw_excel_store()
+        if "excel_raw_history" not in st.session_state:
+            st.session_state["excel_raw_history"] = raw_store.copy()
+        if not df_raw.empty:
+            df_raw_add = df_raw.copy()
+            df_raw_add["__SourceFile"] = getattr(up, "name", "") if up is not None else ""
+            df_raw_add["__ImportedAt"] = pd.Timestamp.now(tz=None)
+            st.session_state["excel_raw_history"] = pd.concat(
+                [st.session_state["excel_raw_history"], df_raw_add], ignore_index=True
+            )
+            _save_raw_excel_store(st.session_state["excel_raw_history"])
 
+        date_col_name = (list(df_raw.columns)[0] if not df_raw.empty else None)
+        st.session_state["date_col_name"] = date_col_name
+        df = ensure_cols(df_raw, date_col_name=date_col_name)
+
+        def _bytes_md5(b: bytes)->str:
+            h=hashlib.md5(); h.update(b); return h.hexdigest()
+        upload_md5=None
+        if up is not None:
+            try: upload_md5=_bytes_md5(up.getvalue())
+            except Exception: upload_md5=None
+        is_new_upload=False
+        if upload_md5:
+            last_md5=st.session_state.get("_last_upload_md5")
+            if last_md5!=upload_md5:
+                is_new_upload=True
+                st.session_state["_last_upload_md5"]=upload_md5
+
+        # 给当前上传的标准化数据打上来源并合并保存
+        if not df.empty:
+            df = df.copy()
+            df["SourceFile"] = getattr(up, "name", "") if up is not None else ""
+            df["ImportedAt"] = pd.Timestamp.now(tz=None)
+
+        merge_mode = "仅追加（不去重）"
+        st.caption("合并策略：仅追加（不去重）")
+
+        if is_new_upload and not df.empty:
+            merged = ensure_cols(pd.concat([persisted_file, df], ignore_index=True))
+            save_store_df(merged)
+            persisted = merged
+        else:
+            persisted = persisted_file
+
+        st.session_state["store_df"] = ensure_cols(persisted.copy())
+        st.caption(f"已存数据量：{len(st.session_state['store_df'])} 条（合并策略：{merge_mode}）")
+
+        if not st.session_state["store_df"].empty:
+            tmp=st.session_state["store_df"].copy()
+            tmp["Year"]=pd.to_numeric(tmp["Year"], errors="coerce")
+            tmp["Month"]=pd.to_numeric(tmp["Month"], errors="coerce")
+            ym_count=(tmp.dropna(subset=["Year","Month"]).astype({"Year":int,"Month":int})
+                      .groupby(["Year","Month"]).size().reset_index(name="数量").sort_values(["Year","Month"]))
+            with st.expander("📊 Year/Month 数量分布（默认收起）", expanded=False):
+                st.dataframe(ym_count, use_container_width=True, height=200)
+
+        # 2) —— 数据清空（仅管理员）
+        st.markdown("---")
+        st.subheader("🧹 数据清空（管理员）")
+        clear_mode = st.radio("选择清空范围", ["清空所选 年份+月份","清空所选 年份（整年）","清空全部数据","仅清空年度目标配置"], index=0, help="清空后会写回本地 data_store.parquet/csv；操作不可撤回。")
+        confirm = st.checkbox("我已确认要执行清空操作")
+        if st.button("执行清空", type="primary", use_container_width=True, disabled=not confirm):
+            df_all = st.session_state.get("store_df", pd.DataFrame()).copy()
+            if clear_mode=="仅清空年度目标配置":
+                save_targets({"target_year_rate":5.0,"q1_t":0.0,"q2_t":0.0,"q3_t":0.0,"q4_t":0.0,"year_t":5.0})
+                for k,v in {"target_year_rate":5.0,"q1_t":0.0,"q2_t":0.0,"q3_t":0.0,"q4_t":0.0,"year_t":5.0}.items():
+                    st.session_state[k]=v
+                st.success("已清空年度目标配置。")
+            else:
+                if clear_mode=="清空全部数据":
+                    df_all = pd.DataFrame(columns=ensure_cols(pd.DataFrame()).columns)
+                elif clear_mode=="清空所选 年份（整年）":
+                    y_ser = pd.to_numeric(df_all.get("Year", pd.Series(dtype="Int64")), errors="coerce")
+                    df_all = df_all[~(y_ser==int(st.session_state.get("year", 2025)))].reset_index(drop=True)
+                elif clear_mode=="清空所选 年份+月份":
+                    y_ser = pd.to_numeric(df_all.get("Year"), errors="coerce")
+                    m_ser = pd.to_numeric(df_all.get("Month"), errors="coerce")
+                    months_to_clear = st.session_state.get("selected_period_months", [1])
+                    df_all = df_all[~((y_ser==int(st.session_state.get("year", 2025))) & (m_ser.isin(months_to_clear)))].reset_index(drop=True)
+                save_store_df(ensure_cols(df_all))
+                st.session_state["store_df"]=ensure_cols(df_all.copy())
+                st.success("已完成清空并保存。")
+
+
+    # ===== 所有人可见：年份 / 月份(季度)选择 & 年度目标配置 =====
     df_all_ss = st.session_state.get("store_df", pd.DataFrame())
     years=YEARS_FIXED[:]
     if not df_all_ss.empty:
@@ -824,10 +819,9 @@ with st.sidebar:
     else:
         months_in_default=[]
     default_month=(max(months_in_default) if months_in_default else 1)
-    default_month_idx=default_month-1
 
     # 年份选择
-    year = st.selectbox("选择年份", years, index=default_year_idx)
+    year = st.selectbox("选择年份", years, index=default_year_idx, key="year")
 
     # —— 月份/季度二合一选项
     PERIOD_OPTIONS = (
@@ -839,8 +833,7 @@ with st.sidebar:
             {"type": "Q", "months": [10, 11, 12],"label": "四季度 (10–12)"},
         ]
     )
-    _default_m = default_month if 1 <= default_month <= 12 else 1
-    _default_label = f"{_default_m:02d}月"
+    _default_label = f"{int(default_month):02d}月"
     _default_idx = next((i for i, o in enumerate(PERIOD_OPTIONS) if o["label"] == _default_label), 0)
 
     period_sel = st.selectbox(
@@ -853,6 +846,7 @@ with st.sidebar:
     st.session_state["selected_period_label"]  = period_sel["label"]
     st.session_state["selected_period_is_quarter"] = (period_sel["type"] == "Q")
 
+    # 年度目标（对所有人可见/可改，若想仅管理员可改，把下面包装进 if is_admin(): 即可）
     tcfg = load_targets()
     st.session_state.setdefault("target_year_rate", tcfg["target_year_rate"])
     st.session_state.setdefault("q1_t", tcfg["q1_t"])
@@ -868,39 +862,13 @@ with st.sidebar:
     st.number_input("全年目标（%）", 0.0, 100.0, float(st.session_state["year_t"]), 0.5, key="year_t")
     save_targets({"target_year_rate":st.session_state["target_year_rate"],"q1_t":st.session_state["q1_t"],"q2_t":st.session_state["q2_t"],"q3_t":st.session_state["q3_t"],"q4_t":st.session_state["q4_t"],"year_t":st.session_state["year_t"]})
 
-    st.markdown("---")
-    st.subheader("🧹 数据清空")
-    clear_mode = st.radio("选择清空范围", ["清空所选 年份+月份","清空所选 年份（整年）","清空全部数据","仅清空年度目标配置"], index=0, help="清空后会写回本地 data_store.parquet/csv；操作不可撤回。")
-    confirm = st.checkbox("我已确认要执行清空操作")
-    if st.button("执行清空", type="primary", use_container_width=True, disabled=not confirm):
-        df_all = st.session_state.get("store_df", pd.DataFrame()).copy()
-        if clear_mode=="仅清空年度目标配置":
-            save_targets({"target_year_rate":5.0,"q1_t":0.0,"q2_t":0.0,"q3_t":0.0,"q4_t":0.0,"year_t":5.0})
-            for k,v in {"target_year_rate":5.0,"q1_t":0.0,"q2_t":0.0,"q3_t":0.0,"q4_t":0.0,"year_t":5.0}.items():
-                st.session_state[k]=v
-            st.success("已清空年度目标配置。")
-        else:
-            if clear_mode=="清空全部数据":
-                df_all = pd.DataFrame(columns=ensure_cols(pd.DataFrame()).columns)
-            elif clear_mode=="清空所选 年份（整年）":
-                y_ser = pd.to_numeric(df_all.get("Year", pd.Series(dtype="Int64")), errors="coerce")
-                df_all = df_all[~(y_ser==int(year))].reset_index(drop=True)
-            elif clear_mode=="清空所选 年份+月份":
-                y_ser = pd.to_numeric(df_all.get("Year"), errors="coerce")
-                m_ser = pd.to_numeric(df_all.get("Month"), errors="coerce")
-                months_to_clear = st.session_state.get("selected_period_months", [1])
-                df_all = df_all[~((y_ser==int(year)) & (m_ser.isin(months_to_clear)))].reset_index(drop=True)
-            save_store_df(ensure_cols(df_all))
-            st.session_state["store_df"]=ensure_cols(df_all.copy())
-            st.success("已完成清空并保存。")
-
 # 统计口径：只看 2025~2030
 df_all = ensure_cols(st.session_state.get("store_df", pd.DataFrame())).copy()
 st.session_state["store_df_ready"] = True
 st.session_state["store_df"] = ensure_cols(df_all.copy())
 
 if df_all.empty:
-    st.info("当前没有任何可筛选的数据。请先上传。")
+    st.info("当前没有任何可筛选的数据。请先由管理员上传。")
 else:
     _year_series  = pd.to_numeric(df_all.get("Year",  pd.Series(dtype="Int64")), errors="coerce")
     mask_valid_year = _year_series.isin(YEARS_FIXED)
@@ -920,7 +888,7 @@ if not df_all.empty:
         st.dataframe(ym_dist, use_container_width=True, height=180)
 
 # 统一读取“所选期间”（可能是单月，也可能是季度）
-cur_year  = int(st.session_state.get("year", year) if isinstance(year, (int, np.integer)) else year)
+cur_year  = int(st.session_state.get("year", 2025))
 _sel_months: List[int] = st.session_state.get("selected_period_months", [1])
 _sel_label  = st.session_state.get("selected_period_label", f"{_sel_months[0]:02d}月")
 _is_quarter = bool(st.session_state.get("selected_period_is_quarter", False))
@@ -1085,7 +1053,6 @@ def build_model_table(df_all: pd.DataFrame, model_col: str, fleet_all: dict,
     else:
         df_cur = pd.DataFrame(columns=list(df_all.columns)+["_model_norm","_is_11a","_paid"])
 
-    # 期间在保量（合计），后续按需转成“平均在保量”
     period_fleet_sum = _sum_fleet_months(fleet_all, cur_year, sel_months)
     n_months = max(1, len(sel_months))
     col_title = (f"在保数量（{cur_year}年 {period_label} 平均）" if use_avg_fleet
@@ -1094,7 +1061,6 @@ def build_model_table(df_all: pd.DataFrame, model_col: str, fleet_all: dict,
     total_fleet_sum = total_qp = 0
     total_cost  = 0.0
 
-    # 先按型号逐行
     for mdl in MODEL_ORDER:
         if mdl == "合计": continue
         fleet_sum = int(period_fleet_sum.get(mdl, 0))
@@ -1121,7 +1087,6 @@ def build_model_table(df_all: pd.DataFrame, model_col: str, fleet_all: dict,
             "期间维修费用合计": fmt_money(month_cost),
         })
 
-    # 合计行
     total_rate = (total_qp / total_fleet_sum * 100.0) if total_fleet_sum > 0 else 0.0
     rows.insert(0, {
         "型号系列": "合计", "类别": "",
@@ -1188,7 +1153,6 @@ fixed_table = build_fixed_issue_table(df_scope, FIXED_DEFECTS)
 if fixed_table.empty:
     st.info(f"{title_suffix} 无数据可统计。")
 else:
-        # —— 统一构造 months 与 q 参数（无论单月/季度/多月都传 months）
     _months_param = ",".join(str(m) for m in _sel_months)
     _q_name = None
     if set(_sel_months) == {1,2,3}:   _q_name = "Q1"
@@ -1205,7 +1169,6 @@ else:
 
     fixed_table["配件分析"] = fixed_table["_code"].apply(_build_link)
 
-
     st.caption(f"统计口径：{title_suffix}")
     st.data_editor(
         fixed_table[["项目（编码+英文）","问题中文名","数量","费用","配件分析"]],
@@ -1220,75 +1183,87 @@ else:
         use_container_width=True
     )
 
-# ============== 原始 Excel 表映射（原样显示“生产日期”） ==============
-def _filter_raw_history_by_month(df_hist: pd.DataFrame, y: int, m: int) -> pd.DataFrame:
+# ============== 原始 Excel 表映射（仅管理员可见更合适，可按需放开） ==============
+def _filter_excel_by_mm_yyyy(df_hist: pd.DataFrame, y: int, m: int) -> pd.DataFrame:
+    """在所有列中识别包含 MMYYYY 的文本，筛出匹配到 y/m 的行并合并、去重。"""
     if df_hist is None or df_hist.empty:
-        return pd.DataFrame()
-    pat = _MMYYYY_ANY
+        return pd.DataFrame(columns=(df_hist.columns if df_hist is not None else []))
+
+    pat = re.compile(r'(?:^|\D)(?P<mm>0[1-9]|1[0-2])(?P<yyyy>20\d{2})(?:\D|$)')
     hits = []
+
     for col in df_hist.columns:
         if col in {"__SourceFile", "__ImportedAt"}:
             continue
-        try:
-            s = df_hist[col].astype(str)
-        except Exception:
+        ext = df_hist[col].astype(str).str.extract(pat)
+        # 没有任何 MMYYYY 命中就跳过该列
+        if ext.empty or (ext.isna().all().all()):
             continue
-        ext = s.str.extract(pat)
-        if ext.isna().all().all():
-            continue
-        mm = pd.to_numeric(ext["mm"], errors="coerce")
+
         yy = pd.to_numeric(ext["yyyy"], errors="coerce")
+        mm = pd.to_numeric(ext["mm"], errors="coerce")
         mask = (yy == int(y)) & (mm == int(m))
         if mask.any():
+            # 保存该列命中的所有原行（保留全部列）
             hits.append(df_hist.loc[mask, df_hist.columns])
+
     if not hits:
         return pd.DataFrame(columns=df_hist.columns)
+
     out = pd.concat(hits, ignore_index=True)
-    try:
-        key_cols = [c for c in out.columns if not c.startswith("__")]
+
+    # 按非“__”前缀的列进行去重
+    key_cols = [c for c in out.columns if not str(c).startswith("__")]
+    if key_cols:
         sig = out[key_cols].astype(str).agg("|".join, axis=1).str.lower()
         out = out.loc[~sig.duplicated(keep="first")].reset_index(drop=True)
-    except Exception:
-        pass
+
     return out
 
-with st.expander("📎 原始 Excel 表映射（原样显示“生产日期”，无 Year/Month）", expanded=False):
-    _hist = st.session_state.get("excel_raw_history", pd.DataFrame())
-    if _hist is None or _hist.empty:
-        st.info("暂无原始上传历史。请先上传 Excel。")
-    else:
-        _excel_filtered = _filter_raw_history_by_month(_hist, cur_year, edit_month)
-        st.caption(f"显示口径：{cur_year}-{edit_month:02d}（自动从所有列中识别 MMYYYY）")
-        if _excel_filtered.empty:
-            st.info("该月在原始历史中没有匹配到数据。请更换年月或检查数据中的日期文本是否包含 MMYYYY。")
+
+if is_admin():
+    with st.expander("📎 原始 Excel 表映射（原样显示“生产日期”，无 Year/Month）", expanded=False):
+        _hist = st.session_state.get("excel_raw_history", pd.DataFrame())
+        if _hist is None or _hist.empty:
+            st.info("暂无原始上传历史。请先上传 Excel。")
         else:
-            cols = [c for c in _excel_filtered.columns if c not in {"__SourceFile","__ImportedAt"}]
-            cols = cols + [c for c in ["__SourceFile","__ImportedAt"] if c in _excel_filtered.columns]
-            _view = _excel_filtered[cols]
-            def _fmt_prod_date_cell(v):
-                s = "" if pd.isna(v) else str(v).strip()
-                m6 = re.fullmatch(r"(\d{2})(\d{2})(\d{2})", s)
-                if m6:
-                    yy, mm, dd = m6.groups()
-                    return f"{2000 + int(yy)}/{mm}/{dd}"
-                m8 = re.fullmatch(r"(\d{4})(\d{2})(\d{2})", s)
-                if m8:
-                    y, mm, dd = m8.groups()
-                    return f"{int(y)}/{mm}/{dd}"
-                try:
-                    dt = pd.to_datetime(s, errors="coerce")
-                    if pd.isna(dt):
+            _excel_filtered = _filter_excel_by_mm_yyyy(_hist, int(cur_year), int(edit_month))
+            st.caption(f"显示口径：{cur_year}-{edit_month:02d}（自动从所有列中识别 MMYYYY）")
+
+            if _excel_filtered.empty:
+                st.info("该月在原始历史中没有匹配到数据。请更换年月或检查数据中的日期文本是否包含 MMYYYY。")
+            else:
+                # 展示时把 __SourceFile / __ImportedAt 放到末尾
+                cols = [c for c in _excel_filtered.columns if c not in {"__SourceFile","__ImportedAt"}]
+                cols += [c for c in ["__SourceFile","__ImportedAt"] if c in _excel_filtered.columns]
+                _view = _excel_filtered[cols]
+
+                def _fmt_prod_date_cell(v):
+                    s = "" if pd.isna(v) else str(v).strip()
+                    m6 = re.fullmatch(r"(\d{2})(\d{2})(\d{2})", s)
+                    if m6:
+                        yy, mm, dd = m6.groups()
+                        return f"{2000 + int(yy)}/{mm}/{dd}"
+                    m8 = re.fullmatch(r"(\d{4})(\d{2})(\d{2})", s)
+                    if m8:
+                        y0, mm, dd = m8.groups()
+                        return f"{int(y0)}/{mm}/{dd}"
+                    try:
+                        dt = pd.to_datetime(s, errors="coerce")
+                        if pd.isna(dt):
+                            return v
+                        return f"{dt.year}/{dt.month}/{dt.day}"
+                    except Exception:
                         return v
-                    return f"{dt.year}/{dt.month}/{dt.day}"
-                except Exception:
-                    return v
-            prod_cols = [c for c in _view.columns if re.search(r"生产\s*日期", str(c), re.I)]
-            _view_display = _view.copy()
-            for c in prod_cols:
-                _view_display[c] = _view_display[c].map(_fmt_prod_date_cell)
-            _n = int(min(len(_view_display), 16))
-            _h = int(46 + 28 * max(_n, 1))
-            st.dataframe(_view_display, use_container_width=True, height=min(_h, 600))
+
+                prod_cols = [c for c in _view.columns if re.search(r"生产\s*日期", str(c), re.I)]
+                _view_display = _view.copy()
+                for c in prod_cols:
+                    _view_display[c] = _view_display[c].map(_fmt_prod_date_cell)
+
+                _n = int(min(len(_view_display), 16))
+                _h = int(46 + 28 * max(_n, 1))
+                st.dataframe(_view_display, use_container_width=True, height=min(_h, 600))
 
 # ============== 调试区域 ==============
 with st.expander("调试：本月关键字命中统计（当选择季度时，这里默认用该期间最后一个月）", expanded=False):
