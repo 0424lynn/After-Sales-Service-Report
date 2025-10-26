@@ -1,0 +1,1202 @@
+[
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "AMC-5801"
+  },
+  {
+    "ctrl": "XR02CX-4R1F1",
+    "vendor": "",
+    "code": "R03002000068",
+    "product": "AOM-50B"
+  },
+  {
+    "ctrl": "XR02CX-4R1F1",
+    "vendor": "",
+    "code": "R03002000068",
+    "product": "AOM-40B"
+  },
+  {
+    "ctrl": "XR02CX-4R1F1",
+    "vendor": "",
+    "code": "R03002000068",
+    "product": "ATHOM-28"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB23GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB48GGR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MBC50GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MBC80GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8001GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8002GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8002GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8003GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8004GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8005GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8006GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8501GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8503GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8503GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8504GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8504GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8505GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8505GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8507GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8507GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8519GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBGF48GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8701GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8701GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8703GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8703GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8705GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8707GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8709GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8721GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8721GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8722GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8723GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8724GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8725GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8726GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8727GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8728GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8733GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MGF24FGR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF24RGR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF36FGR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF36RGR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8401GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8401GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8402GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8403GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8404GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8405GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8405GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8406GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8406GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8407GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8409GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8410GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8412GR"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8413GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8448GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8450GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8451GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8452GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8453GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8454GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC58GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC90GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8201GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8202GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8202GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8203GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MSCT-48-10GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF17GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF3610GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8301GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8301GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8302GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8302GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8303GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8304GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8305GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8306GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8307GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8307GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8308GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB59GR"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MBC65GR"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8007GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8010GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8506GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8508GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBGF24GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8720GR"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8415GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC23GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC68GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "SBB48SGGR-AUS1"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "SBB59GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "SBB69SGGR-AUS2"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB69GR"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB23"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB48G"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MBC50"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MBC80"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8001"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8002"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8002"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8003"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8004"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8005"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8006"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8501"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8503"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8503"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8504"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8504"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8505"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8505"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8507"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8507"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8519"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBGF48"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8701"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8701"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8703"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8703"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8705"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8707"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8709"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8721"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8721"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8722"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8723"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8724"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8725"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8726"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8727"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8728"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MCF8733"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MGF24F"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF24R"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF36F"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF36R"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8401"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8401"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8402"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8403"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8404"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8405"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8405"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8406"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8406"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8407"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8409"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8410"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8412"
+  },
+  {
+    "ctrl": "XW06K-401F0",
+    "vendor": "",
+    "code": "R03002000088",
+    "product": "MGF8413"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8448"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8450"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8451"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8452"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8453"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MGF8454"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC58"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC90"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8201"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8202"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8202"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MPF8203"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MSCT-48-10"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF17"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF3610"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8301"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8301"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8302"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8302"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8303"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8304"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8305"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8306"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8307"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8307"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MSF8308"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB59"
+  },
+  {
+    "ctrl": "PZYDS1E5I1",
+    "vendor": "",
+    "code": "R03002000042",
+    "product": "MBC65"
+  },
+  {
+    "ctrl": "PZYDC1E5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBF8007"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8010"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8506"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBF8508"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MBGF24"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000044",
+    "product": "MCF8720"
+  },
+  {
+    "ctrl": "XW03K-401F0",
+    "vendor": "",
+    "code": "R03002000089",
+    "product": "MGF8415"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC23"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MKC68"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "SBB48SG-AUS1"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "SBB59"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "SBB69SG-AUS2"
+  },
+  {
+    "ctrl": "PZYDS1J5I1",
+    "vendor": "",
+    "code": "R03002000043",
+    "product": "MBB69"
+  }
+]

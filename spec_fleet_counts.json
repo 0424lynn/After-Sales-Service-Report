@@ -1,0 +1,849 @@
+{
+  "triples": [
+    {
+      "a": "CYR400P",
+      "b": "CYR400P",
+      "fleet": 3317
+    },
+    {
+      "a": "HD350-AP-161",
+      "b": "HD350-AP-161",
+      "fleet": 1515
+    },
+    {
+      "a": "MBB90G",
+      "b": "MBB90GGR",
+      "fleet": 1614
+    },
+    {
+      "a": "MBF8001",
+      "b": "MBF8001GR",
+      "fleet": 5936
+    },
+    {
+      "a": "MBF8002",
+      "b": "MBF8002GR",
+      "fleet": 6217
+    },
+    {
+      "a": "MBF8004",
+      "b": "MBF8004GR",
+      "fleet": 5169
+    },
+    {
+      "a": "MBF8005",
+      "b": "MBF8005GR",
+      "fleet": 9476
+    },
+    {
+      "a": "MBF8501",
+      "b": "MBF8501GR",
+      "fleet": 4876
+    },
+    {
+      "a": "MBF8503",
+      "b": "MBF8503GR",
+      "fleet": 8759
+    },
+    {
+      "a": "MBF8505",
+      "b": "MBF8505GR",
+      "fleet": 5579
+    },
+    {
+      "a": "MBF8507",
+      "b": "MBF8507GR",
+      "fleet": 11224
+    },
+    {
+      "a": "MCF8707",
+      "b": "MCF8707GR",
+      "fleet": 2836
+    },
+    {
+      "a": "MCF8721ES",
+      "b": "MCF8721ES",
+      "fleet": 4182
+    },
+    {
+      "a": "MCF8722",
+      "b": "MCF8722GR",
+      "fleet": 4834
+    },
+    {
+      "a": "MCF8723",
+      "b": "MCF8723GR",
+      "fleet": 5878
+    },
+    {
+      "a": "MCF8724",
+      "b": "MCF8724GR",
+      "fleet": 2083
+    },
+    {
+      "a": "MCF8725",
+      "b": "MCF8725GR",
+      "fleet": 1937
+    },
+    {
+      "a": "MCF8727",
+      "b": "MCF8727GR",
+      "fleet": 3534
+    },
+    {
+      "a": "MGF36R",
+      "b": "MGF36RGR",
+      "fleet": 1866
+    },
+    {
+      "a": "MGF8401",
+      "b": "MGF8401GR",
+      "fleet": 3360
+    },
+    {
+      "a": "MGF8402",
+      "b": "MGF8402GR",
+      "fleet": 6462
+    },
+    {
+      "a": "MGF8403",
+      "b": "MGF8403GR",
+      "fleet": 2497
+    },
+    {
+      "a": "MGF8404",
+      "b": "MGF8404GR",
+      "fleet": 2222
+    },
+    {
+      "a": "MGF8405",
+      "b": "MGF8405GR",
+      "fleet": 2838
+    },
+    {
+      "a": "MGF8406",
+      "b": "MGF8406GR",
+      "fleet": 2624
+    },
+    {
+      "a": "MGF8448",
+      "b": "MGF8448GR",
+      "fleet": 2659
+    },
+    {
+      "a": "MGF8450",
+      "b": "MGF8450GR",
+      "fleet": 3928
+    },
+    {
+      "a": "MGF8452",
+      "b": "MGF8452GR",
+      "fleet": 2332
+    },
+    {
+      "a": "MGF8453",
+      "b": "MGF8453GR",
+      "fleet": 2418
+    },
+    {
+      "a": "MPF8202",
+      "b": "MPF8202GR",
+      "fleet": 2918
+    },
+    {
+      "a": "MSF3610",
+      "b": "MSF3610GR",
+      "fleet": 2083
+    },
+    {
+      "a": "MSF8301",
+      "b": "MSF8301GR",
+      "fleet": 6131
+    },
+    {
+      "a": "MSF8302",
+      "b": "MSF8302GR",
+      "fleet": 9716
+    },
+    {
+      "a": "MGF8409",
+      "b": "MGF8409GR",
+      "fleet": 1879
+    },
+    {
+      "a": "MSF8303",
+      "b": "MSF8303GR",
+      "fleet": 4048
+    },
+    {
+      "a": "MSF8304",
+      "b": "MSF8304GR",
+      "fleet": 2498
+    },
+    {
+      "a": "MSF8305",
+      "b": "MSF8305GR",
+      "fleet": 3166
+    },
+    {
+      "a": "MSF8306",
+      "b": "MSF8306GR",
+      "fleet": 6026
+    },
+    {
+      "a": "MGF8401L",
+      "b": "MGF8401GRL",
+      "fleet": 1805
+    },
+    {
+      "a": "MSF8307",
+      "b": "MSF8307GR",
+      "fleet": 5063
+    },
+    {
+      "a": "MSF8308",
+      "b": "MSF8308GR",
+      "fleet": 5117
+    },
+    {
+      "a": "YR140-AP-161",
+      "b": "YR140-AP-161",
+      "fleet": 3852
+    },
+    {
+      "a": "YR280-AP-161",
+      "b": "YR280-AP-161",
+      "fleet": 3524
+    },
+    {
+      "a": "MBC50",
+      "b": "MBC50GR",
+      "fleet": 1779
+    },
+    {
+      "a": "YR450-AP-161",
+      "b": "YR450-AP-161",
+      "fleet": 4001
+    },
+    {
+      "a": "MCF8720",
+      "b": "MCF8720GR",
+      "fleet": 1704
+    },
+    {
+      "a": "MPF8203",
+      "b": "MPF8203GR",
+      "fleet": 1517
+    },
+    {
+      "a": "MCF8703ES",
+      "b": "MCF8703ES",
+      "fleet": 1531
+    },
+    {
+      "a": "MSF3615",
+      "b": "MSF3615GR",
+      "fleet": 1427
+    },
+    {
+      "a": "MBF8505L",
+      "b": "MBF8505GRL",
+      "fleet": 1443
+    },
+    {
+      "a": "MBF8504",
+      "b": "MBF8504GR",
+      "fleet": 1395
+    },
+    {
+      "a": "MBC65",
+      "b": "MBC65GR",
+      "fleet": 1555
+    },
+    {
+      "a": "MCF8705",
+      "b": "MCF8705GR",
+      "fleet": 1671
+    },
+    {
+      "a": "MBF8508",
+      "b": "MBF8508GR",
+      "fleet": 1269
+    },
+    {
+      "a": "MBF8501L",
+      "b": "MBF8501GRL",
+      "fleet": 1252
+    },
+    {
+      "a": "MCF8728",
+      "b": "MCF8728GR",
+      "fleet": 1410
+    },
+    {
+      "a": "MPF8201",
+      "b": "MPF8201GR",
+      "fleet": 1169
+    },
+    {
+      "a": "MBF8519",
+      "b": "MBF8519GR",
+      "fleet": 1232
+    },
+    {
+      "a": "MBF8006",
+      "b": "MBF8006GR",
+      "fleet": 1188
+    },
+    {
+      "a": "MGF8410",
+      "b": "MGF8410GR",
+      "fleet": 1070
+    },
+    {
+      "a": "MCF8726",
+      "b": "MCF8726GR",
+      "fleet": 1107
+    },
+    {
+      "a": "MBF8003",
+      "b": "MBF8003GR",
+      "fleet": 1080
+    },
+    {
+      "a": "MGF8407",
+      "b": "MGF8407GR",
+      "fleet": 1031
+    },
+    {
+      "a": "MGF8413",
+      "b": "MGF8413GR",
+      "fleet": 822
+    },
+    {
+      "a": "MBB48G",
+      "b": "MBB48GGR",
+      "fleet": 1048
+    },
+    {
+      "a": "MGF8405L",
+      "b": "MGF8405GRL",
+      "fleet": 985
+    },
+    {
+      "a": "MKC58",
+      "b": "MKC58GR",
+      "fleet": 975
+    },
+    {
+      "a": "YR800-AP-261",
+      "b": "YR800-AP-261",
+      "fleet": 1008
+    },
+    {
+      "a": "MGF36F",
+      "b": "MGF36FGR",
+      "fleet": 850
+    },
+    {
+      "a": "MGF8451",
+      "b": "MGF8451GR",
+      "fleet": 929
+    },
+    {
+      "a": "MBB59G",
+      "b": "MBB59GGR",
+      "fleet": 915
+    },
+    {
+      "a": "MBF8506",
+      "b": "MBF8506GR",
+      "fleet": 754
+    },
+    {
+      "a": "MKC90",
+      "b": "MKC90GR",
+      "fleet": 875
+    },
+    {
+      "a": "MCF8733",
+      "b": "MCF8733GR",
+      "fleet": 823
+    },
+    {
+      "a": "MBC80",
+      "b": "MBC80GR",
+      "fleet": 889
+    },
+    {
+      "a": "MKC23",
+      "b": "MKC23GR",
+      "fleet": 881
+    },
+    {
+      "a": "MBB69G",
+      "b": "MBB69GGR",
+      "fleet": 956
+    },
+    {
+      "a": "MGF8412",
+      "b": "MGF8412GR",
+      "fleet": 650
+    },
+    {
+      "a": "CYR700P",
+      "b": "CYR700P",
+      "fleet": 887
+    },
+    {
+      "a": "MGF24R",
+      "b": "MGF24RGR",
+      "fleet": 718
+    },
+    {
+      "a": "MKC68",
+      "b": "MKC68GR",
+      "fleet": 832
+    },
+    {
+      "a": "MCF8701",
+      "b": "MCF8701GR",
+      "fleet": 824
+    },
+    {
+      "a": "CTD-3",
+      "b": "CTD-3",
+      "fleet": 931
+    },
+    {
+      "a": "MGF24F",
+      "b": "MGF24FGR",
+      "fleet": 577
+    },
+    {
+      "a": "MGF8415",
+      "b": "MGF8415GR",
+      "fleet": 626
+    },
+    {
+      "a": "MGF8408",
+      "b": "MGF8408GR",
+      "fleet": 514
+    },
+    {
+      "a": "MBF8502",
+      "b": "MBF8502GR",
+      "fleet": 486
+    },
+    {
+      "a": "MGF8454",
+      "b": "MGF8454GR",
+      "fleet": 486
+    },
+    {
+      "a": "MBGF24",
+      "b": "MBGF24GR",
+      "fleet": 318
+    },
+    {
+      "a": "AMC-3401",
+      "b": "AMC-3401",
+      "fleet": 25
+    },
+    {
+      "a": "AMC-4901",
+      "b": "AMC-4901",
+      "fleet": 14
+    },
+    {
+      "a": "AMC-4902",
+      "b": "AMC-4902",
+      "fleet": 5
+    },
+    {
+      "a": "AMC-5801",
+      "b": "AMC-5801",
+      "fleet": 114
+    },
+    {
+      "a": "AOM-40B",
+      "b": "AOM-40B",
+      "fleet": 199
+    },
+    {
+      "a": "AOM-50B",
+      "b": "AOM-50B",
+      "fleet": 246
+    },
+    {
+      "a": "ATHOM-28",
+      "b": "ATHOM-28",
+      "fleet": 35
+    },
+    {
+      "a": "ATHOM-39",
+      "b": "ATHOM-39",
+      "fleet": 69
+    },
+    {
+      "a": "ATHOM-60",
+      "b": "ATHOM-60",
+      "fleet": 46
+    },
+    {
+      "a": "CRDC-35",
+      "b": "CRDC-35",
+      "fleet": 186
+    },
+    {
+      "a": "CRDC-46",
+      "b": "CRDC-46",
+      "fleet": 200
+    },
+    {
+      "a": "CRDS-42",
+      "b": "CRDS-42",
+      "fleet": 91
+    },
+    {
+      "a": "CRDS-56",
+      "b": "CRDS-56",
+      "fleet": 200
+    },
+    {
+      "a": "MBB23",
+      "b": "MBB23GR",
+      "fleet": 65
+    },
+    {
+      "a": "MBB48",
+      "b": "MBB48GR",
+      "fleet": 256
+    },
+    {
+      "a": "MBB59",
+      "b": "MBB59GR",
+      "fleet": 300
+    },
+    {
+      "a": "MBB69",
+      "b": "MBB69GR",
+      "fleet": 316
+    },
+    {
+      "a": "MBB90",
+      "b": "MBB90GR",
+      "fleet": 413
+    },
+    {
+      "a": "MBC24",
+      "b": "MBC24GR",
+      "fleet": 97
+    },
+    {
+      "a": "MBC36",
+      "b": "MBC36GR",
+      "fleet": 203
+    },
+    {
+      "a": "MBF15FS",
+      "b": "MBF15FSGR",
+      "fleet": 36
+    },
+    {
+      "a": "MBF15FSL",
+      "b": "MBF15FSGRL",
+      "fleet": 3
+    },
+    {
+      "a": "MBF15RS",
+      "b": "MBF15RSGR",
+      "fleet": 26
+    },
+    {
+      "a": "MBF15RSL",
+      "b": "MBF15RSGRL",
+      "fleet": 6
+    },
+    {
+      "a": "MBF8007",
+      "b": "MBF8007GR",
+      "fleet": 360
+    },
+    {
+      "a": "MBF8007L",
+      "b": "MBF8007GRL",
+      "fleet": 380
+    },
+    {
+      "a": "MBF8008",
+      "b": "MBF8008GR",
+      "fleet": 10
+    },
+    {
+      "a": "MBF8010",
+      "b": "MBF8010GR",
+      "fleet": 230
+    },
+    {
+      "a": "MBF8010L",
+      "b": "MBF8010GRL",
+      "fleet": 281
+    },
+    {
+      "a": "MBF8011",
+      "b": "MBF8011GR",
+      "fleet": 25
+    },
+    {
+      "a": "MBF8520",
+      "b": "MBF8520GR",
+      "fleet": 427
+    },
+    {
+      "a": "MBF8531",
+      "b": "MBF8531GR",
+      "fleet": 38
+    },
+    {
+      "a": "MBF8532",
+      "b": "MBF8532GR",
+      "fleet": 49
+    },
+    {
+      "a": "MBGF48",
+      "b": "MBGF48GR",
+      "fleet": 251
+    },
+    {
+      "a": "MCF8701L",
+      "b": "MCF8701GRL",
+      "fleet": 18
+    },
+    {
+      "a": "MCF8709",
+      "b": "MCF8709GR",
+      "fleet": 542
+    },
+    {
+      "a": "MCF8720L",
+      "b": "MCF8720GRL",
+      "fleet": 71
+    },
+    {
+      "a": "MCF8722L",
+      "b": "MCF8722GRL",
+      "fleet": 138
+    },
+    {
+      "a": "MCF8729",
+      "b": "MCF8729GR",
+      "fleet": 56
+    },
+    {
+      "a": "MCF8732",
+      "b": "MCF8732GR",
+      "fleet": 229
+    },
+    {
+      "a": "MGF44",
+      "b": "MGF44GR",
+      "fleet": 23
+    },
+    {
+      "a": "MGF67",
+      "b": "MGF67GR",
+      "fleet": 95
+    },
+    {
+      "a": "MGF8407-AUS2",
+      "b": "MGF8407GR-AUS2",
+      "fleet": 228
+    },
+    {
+      "a": "MGF8414",
+      "b": "MGF8414GR",
+      "fleet": 49
+    },
+    {
+      "a": "MGF8420",
+      "b": "MGF8420GR",
+      "fleet": 103
+    },
+    {
+      "a": "MGF8423",
+      "b": "MGF8423GR",
+      "fleet": 24
+    },
+    {
+      "a": "MGF8428",
+      "b": "MGF8428GR",
+      "fleet": 17
+    },
+    {
+      "a": "MSCT-48-10",
+      "b": "MSCT-48-10",
+      "fleet": 254
+    },
+    {
+      "a": "MSF17-NTCV",
+      "b": "MSF17GR-NTCV",
+      "fleet": 546
+    },
+    {
+      "a": "MSF8306-NTCV",
+      "b": "MSF8306GR-NTCV",
+      "fleet": 261
+    },
+    {
+      "a": "MSF8307-NTCV",
+      "b": "MSF8307GR-NTCV",
+      "fleet": 253
+    },
+    {
+      "a": "MSF8308-NTCV",
+      "b": "MSF8308GR-NTCV",
+      "fleet": 117
+    },
+    {
+      "a": "RDCS-35",
+      "b": "RDCS-35",
+      "fleet": 128
+    },
+    {
+      "a": "RDCS-48",
+      "b": "RDCS-48",
+      "fleet": 231
+    },
+    {
+      "a": "RDCS-60",
+      "b": "RDCS-60",
+      "fleet": 202
+    },
+    {
+      "a": "SBB48G-AUS1",
+      "b": "SBB48GGR-AUS1",
+      "fleet": 461
+    },
+    {
+      "a": "SBB48G-AUS2",
+      "b": "SBB48GGR-AUS2",
+      "fleet": 677
+    },
+    {
+      "a": "SBB48-AUS1",
+      "b": "SBB48GR-AUS1",
+      "fleet": 225
+    },
+    {
+      "a": "SBB48-AUS2",
+      "b": "SBB48GR-AUS2",
+      "fleet": 271
+    },
+    {
+      "a": "SBB48SG-AUS1",
+      "b": "SBB48SGGR-AUS1",
+      "fleet": 17
+    },
+    {
+      "a": "SBB48SG-AUS2",
+      "b": "SBB48SGGR-AUS2",
+      "fleet": 54
+    },
+    {
+      "a": "SBB59G-AUS1",
+      "b": "SBB59GGR-AUS1",
+      "fleet": 378
+    },
+    {
+      "a": "SBB59G-AUS2",
+      "b": "SBB59GGR-AUS2",
+      "fleet": 585
+    },
+    {
+      "a": "SBB59-AUS1",
+      "b": "SBB59GR-AUS1",
+      "fleet": 146
+    },
+    {
+      "a": "SBB59-AUS2",
+      "b": "SBB59GR-AUS2",
+      "fleet": 282
+    },
+    {
+      "a": "SBB69G-AUS1",
+      "b": "SBB69GGR-AUS1",
+      "fleet": 187
+    },
+    {
+      "a": "SBB69G-AUS2",
+      "b": "SBB69GGR-AUS2",
+      "fleet": 370
+    },
+    {
+      "a": "SBB69-AUS1",
+      "b": "SBB69GR-AUS1",
+      "fleet": 90
+    },
+    {
+      "a": "SBB69-AUS2",
+      "b": "SBB69GR-AUS2",
+      "fleet": 137
+    },
+    {
+      "a": "SBB69SG-AUS1",
+      "b": "SBB69SGGR-AUS1",
+      "fleet": 18
+    },
+    {
+      "a": "SBB69SG-AUS2",
+      "b": "SBB69SGGR-AUS2",
+      "fleet": 42
+    },
+    {
+      "a": "YR450S-AP-161",
+      "b": "YR450S-AP-161",
+      "fleet": 133
+    },
+    {
+      "a": "MCF8703",
+      "b": "MCF8703ES",
+      "fleet": 1531
+    },
+    {
+      "a": "MCF8721",
+      "b": "MCF8721ES",
+      "fleet": 4182
+    },
+    {
+      "a": "MSF17",
+      "b": "MSF17GR-NTCV",
+      "fleet": 546
+    },
+    {
+      "a": "SBB59",
+      "b": "SBB59GR-AUS2",
+      "fleet": 282
+    },
+    {
+      "a": "SBB69SG_AUS2",
+      "b": "SBB69SGGR-AUS2",
+      "fleet": 42
+    },
+    {
+      "a": "SBB69G",
+      "b": "SBB69GGR-AUS2",
+      "fleet": 370
+    },
+    {
+      "a": "SBB48",
+      "b": "SBB48GR-AUS2",
+      "fleet": 271
+    },
+    {
+      "a": "SBB48G",
+      "b": "SBB48GGR-AUS2",
+      "fleet": 677
+    }
+  ]
+}

@@ -1,0 +1,1080 @@
+[
+  {
+    "type": "冷凝风机",
+    "product": "AOM-50BGR",
+    "fan": "AC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000069"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBB48GGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBB69GGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBB90GGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBB90GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBC50GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8001GR",
+    "fan": "AC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000069"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8003GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000074"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8004GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000080"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8005GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000080"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8007GR",
+    "fan": "AC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000069"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8501GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8503GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8504GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000071"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8505GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8507GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8508GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8519GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBF8531GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBGF24GR",
+    "fan": "EBM高效节能风机",
+    "vendor": "",
+    "code": "R03001000076"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MBGF48GR",
+    "fan": "EBM高效节能风机",
+    "vendor": "",
+    "code": "R03001000076"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8701GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8703GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8705GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8709GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8720GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8721GR",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8722GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8723GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8725GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8726GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8727GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8728GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000071"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8733GR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF24FGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF24RGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF36FGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF36RGR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8401GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8401GRL",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8402GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8403GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8404GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8405GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8405GRL",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8406GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8407GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8407GR-AUS2",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8409GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8410GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8412GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8413GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8450GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8451GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8452GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8453-AUS1GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MGF8454GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MKC23GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MPF8202GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MPF8203GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF17GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF17GR-NTCV",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF3610GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF3615GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8301GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8302",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8302GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8303GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8304GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8305GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8306GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8307GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MSF8308GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "RDCS-35",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "RDCS-48",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000065"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "SBB59-AUS1GR",
+    "fan": "赛微YZ10-20-1罩级电机",
+    "vendor": "",
+    "code": "R03001000100"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "AOM-50BGR",
+    "fan": "AC罩机风机",
+    "vendor": "微光",
+    "code": "R03001000064"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBB48GGR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBB69GGR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBB90GGR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBB90GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBC50GR",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8001GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8003GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8004GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8005GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8007GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8501GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8503GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8504GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8505GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8507GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8508GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8519GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBF8531GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBGF24GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MBGF48GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8701GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8703GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8705GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8709GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8720GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8721GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8722GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8723GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8725GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8726GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8727GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8728GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8733GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF24FGR",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF24RGR",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF36FGR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF36RGR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8401GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8401GRL",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8402GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8403GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8404GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8405GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8405GRL",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8406GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8407GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8407GR-AUS2",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8409GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8410GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8412GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8413GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8450GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8451GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8452GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8453-AUS1GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MGF8454GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MKC23GR",
+    "fan": "DC12038风机",
+    "vendor": "九龙",
+    "code": "R03001000014"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MPF8202GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MPF8203GR",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF17GR",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF17GR-NTCV",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF3610GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF3615GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8301GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8302",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8302GR",
+    "fan": "EC12038风机",
+    "vendor": "时大芊",
+    "code": "R03001000138"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8303GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8304GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8305GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8306GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8307GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MSF8308GR",
+    "fan": "EC罩机风机",
+    "vendor": "松下",
+    "code": "R03001000009"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "RDCS-35",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "RDCS-48",
+    "fan": "DC12038风机",
+    "vendor": "闵泉",
+    "code": "R03001000015"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "SBB59-AUS1GR",
+    "fan": "AC罩机风机",
+    "vendor": "赛微",
+    "code": "R03001000099"
+  },
+  {
+    "type": "冷凝风机",
+    "product": "MCF8703ES",
+    "fan": "AC12038风机",
+    "vendor": "EBM",
+    "code": "R03001000062"
+  },
+  {
+    "type": "蒸发风机",
+    "product": "MCF8703ES",
+    "fan": "EC罩机风机",
+    "vendor": "EBM",
+    "code": "R03001000005"
+  }
+]
