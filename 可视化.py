@@ -48,6 +48,13 @@ def _remove_analysis_pages():
         "pages/外部漏水分析.py",
         "pages/泄氟分析.py",
         "pages/蒸发器线圈结冰分析.py",
+        "pages/ICE温控板.py",
+        "pages/ICE压缩机.py",
+        "pages/ICE水位探头.py",
+        "pages/ICE调式厚冰.py",
+        "pages/ICE化霜探头.py",
+        "pages/ICE水泵.py",
+        "pages/ICE蒸发器损坏.py",
     }
     need_hide = {p.lower() for p in need_hide}
     name_rx = re.compile(r".*分析$")   # 页面名以“分析”结尾的一律干掉
@@ -65,7 +72,7 @@ import streamlit.components.v1 as components
 components.html("""
 <script>
 (function(){
-  const badText = [/分析$/,'配件分析','风机分析','温控器分析','压缩机分析','外部漏水分析','泄氟分析','蒸发器线圈结冰分析'];
+  const badText = [/分析$/,'配件分析','风机分析','温控器分析','压缩机分析','外部漏水分析','泄氟分析','蒸发器线圈结冰分析','ICE水位探头','ICE温控板','ICE压缩机','ICE化霜探头','ICE调式厚冰','ICE水泵','ICE蒸发器损坏'];
   function hideNav(){
     const nav = parent.document.querySelector('[data-testid="stSidebarNav"]') 
             || parent.document.querySelector('nav[aria-label="Sidebar navigation"]');

@@ -2,7 +2,6 @@
 import streamlit as st
 from auth import require_login, current_user, is_admin, logout_button
 
-
 # === BEGIN: 彻底从侧栏移除“分析”页面（放最顶部，且在 st.set_page_config 之前） ===
 import os, re, sys
 

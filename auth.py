@@ -1,4 +1,3 @@
-# auth.py
 # -*- coding: utf-8 -*-
 import json
 import time
@@ -10,15 +9,15 @@ from typing import Dict, Any, Optional
 
 import streamlit as st
 
-# ========= 应用信息（登录页抬头） =========
-APP_NAME = "Atosa-美国售后报告分析"
+# ===== 应用信息（登录页抬头） =====
+APP_NAME = "Atosa-美国售后报告"
 APP_SUBTITLE = "售后报告 · 数据看板 · 质量洞察"
 
-# ========= 存储与会话 =========
+# ===== 存储与会话 =====
 USERS_JSON = Path("users.json")
 SESSION_TTL_SECONDS = 8 * 3600  # 登录有效期 8 小时
 
-# ========= 密码哈希（PBKDF2-SHA256） =========
+# ===== 密码哈希（PBKDF2-SHA256） =====
 def _pbkdf2_hash(password: str, salt: str, rounds: int = 200_000) -> str:
     dk = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt.encode("utf-8"), rounds, dklen=32)
     return dk.hex()
@@ -31,7 +30,7 @@ def verify_password(stored_salt: str, stored_hash: str, plain: str) -> bool:
     test_hash = _pbkdf2_hash(plain or "", stored_salt or "")
     return hmac.compare_digest(stored_hash or "", test_hash)
 
-# ========= 用户存取 =========
+# ===== 用户存取 =====
 def load_users() -> Dict[str, Any]:
     if USERS_JSON.exists():
         try:
@@ -67,7 +66,7 @@ def get_user(username: str) -> Optional[Dict[str, Any]]:
             return u
     return None
 
-# ========= 登录态便捷函数 =========
+# ===== 登录态便捷函数 =====
 def current_user() -> Optional[Dict[str, Any]]:
     """返回 {'username','name','role','login_at'} 或 None"""
     return st.session_state.get("user")
@@ -80,7 +79,7 @@ def require_role(*roles: str) -> bool:
     u = current_user() or {}
     return u.get("role") in set(roles)
 
-# ========= 样式（隐藏侧栏 + 登录卡片） =========
+# ===== 样式（隐藏侧栏 + 登录卡片） =====
 def hide_sidebar_css():
     st.markdown(
         """
@@ -102,62 +101,75 @@ def _inject_login_css():
         }
         /* 主容器：限制宽度 + 垂直居中 */
         .block-container {
-            max-width: 420px !important;
-            padding-top: 12vh !important;
+            max-width: 480px !important;
+            padding-top: 10vh !important;
             padding-bottom: 8vh !important;
         }
-        /* 表单做成小卡片 */
-        form[data-testid="stForm"] {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 16px;
-            padding: 22px 18px 18px;
-            box-shadow: 0 10px 28px rgba(0,0,0,.45);
-            backdrop-filter: blur(8px);
-        }
-        /* 标题与副标题 */
+        /* 标题与副标题（更大） */
         h1.atosa-title {
             text-align: center;
-            font-size: 20px;
+            font-size: 28px;           /* ← 加大 */
+            line-height: 1.25;
             color: #f8fafc;
-            margin-bottom: 6px;
-            font-weight: 700;
-            letter-spacing: .2px;
+            margin-bottom: 8px;
+            font-weight: 800;          /* ← 更粗 */
+            letter-spacing: .4px;
         }
         p.atosa-subtitle {
             text-align: center;
-            color: #94a3b8;
-            font-size: 12.5px;
+            color: #cbd5e1;
+            font-size: 13.5px;
             margin-top: 0;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
-        /* 输入框外观 */
-        .stTextInput input, .stPassword input {
-            background: rgba(15,23,42,.85) !important;
+
+        /* 卡片外层：给一个唯一作用域，避免主题样式覆盖 */
+        #atosa-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 16px;
+            padding: 18px 16px 16px;
+            box-shadow: 0 10px 28px rgba(0,0,0,.45);
+            backdrop-filter: blur(8px);
+        }
+
+        /* 仅在卡片作用域内隐藏标签，让输入框与卡片齐平 */
+        #atosa-card .stTextInput > label,
+        #atosa-card .stPassword   > label {
+            display: none !important;
+        }
+
+        /* 输入框：100% 宽、与卡片齐平 */
+        #atosa-card .stTextInput input,
+        #atosa-card .stPassword   input {
+            width: 100% !important;
+            background: rgba(15,23,42,.92) !important;
             color: #e5e7eb !important;
             border: 1px solid rgba(255,255,255,.18) !important;
             border-radius: 10px !important;
-            height: 38px !important;
+            height: 40px !important;
+            padding: 0 12px !important;
         }
-        /* 提交按钮 */
-        .stButton > button {
+
+        /* 按钮：100% 宽，与输入框对齐 */
+        #atosa-card .stButton > button {
             width: 100% !important;
-            height: 38px !important;
+            height: 40px !important;
             border-radius: 10px !important;
-            font-weight: 600 !important;
-            background: linear-gradient(90deg,#3b82f6,#2563eb) !important;
+            font-weight: 700 !important;
+            background: linear-gradient(90deg,#ef4444,#f97316) !important;
             color: #fff !important;
             border: none !important;
         }
-        .stButton > button:hover {
-            background: linear-gradient(90deg,#2563eb,#1d4ed8) !important;
+        #atosa-card .stButton > button:hover {
+            background: linear-gradient(90deg,#f97316,#ea580c) !important;
         }
         </style>
         """,
         unsafe_allow_html=True,
     )
 
-# ========= 登录/退出/权限 =========
+# ===== 登录/退出/权限 =====
 def _session_valid() -> bool:
     u = st.session_state.get("user")
     if not u or not st.session_state.get("auth_ok"):
@@ -167,7 +179,7 @@ def _session_valid() -> bool:
     return True
 
 def login_form():
-    """渲染登录卡片：居中、小尺寸、带显示密码开关"""
+    """渲染登录卡片：居中、小尺寸、输入框与卡片齐平"""
     hide_sidebar_css()
     _inject_login_css()
 
@@ -175,15 +187,14 @@ def login_form():
     st.markdown(f"<h1 class='atosa-title'>{APP_NAME}</h1>", unsafe_allow_html=True)
     st.markdown(f"<p class='atosa-subtitle'>{APP_SUBTITLE}</p>", unsafe_allow_html=True)
 
-    # 表单（不再用自定义外层 div 包裹，避免控件错位）
+    # 表单（用占位符 + 折叠标签，让输入框与卡片齐平）
     with st.form("login_form", clear_on_submit=False):
-        username = st.text_input("用户名", key="login_user_input")
-        col1, col2 = st.columns([1, 1])
-        with col1:
-            show_pw = st.checkbox("显示密码", value=False, key="login_show_pw")
-        with col2:
-            st.write("")  # 对齐
-        password = st.text_input("密码", type=("default" if show_pw else "password"), key="login_pwd_input")
+        username = st.text_input("用户名", placeholder="用户名", label_visibility="collapsed", key="login_user_input")
+        password = st.text_input("密码", placeholder="密码", type="password", label_visibility="collapsed", key="login_pwd_input")
+        show_pw = st.checkbox("显示密码", value=False, help="勾选后可查看明文密码")
+        if show_pw and st.session_state.get("login_pwd_input"):
+            # 切换为明文展示（只在界面层显示，不影响验证）
+            st.text_input("明文密码", value=st.session_state["login_pwd_input"], label_visibility="collapsed", disabled=True)
         submitted = st.form_submit_button("登录", type="primary")
 
     if submitted:
